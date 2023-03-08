@@ -33,9 +33,12 @@ const eqObjects = function(object1, object2){
 };
 
 const assertObjectsEqual = function(object1, object2, expected) {
+  const inspect = require('util').inspect;
   const result = eqObjects(object1, object2) === expected;
+  const obj1 = inspect(object1);
+  const obj2 = inspect(object2);
   
-  let output = result ? `✅Assertion Passed: Objects are the same === ${expected}` : `⛔Assertion Failed: Objects are the same !== ${expected}`;
+  let output = result ? `✅Assertion Passed: ${obj1} is the same as ${obj2} === ${expected}` : `⛔Assertion Failed: ${obj1} is the same as ${obj2} !== ${expected}`;
 
   console.log(output);
   return result;

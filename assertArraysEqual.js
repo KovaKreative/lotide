@@ -11,9 +11,12 @@ const eqArrays = function(arrayA, arrayB) {
   return false;
 };
 
-const assertArraysEqual = function(arrayA, arrayB) {
+const assertArraysEqual = function(arrayA, arrayB, expected) {
 
-  let output = eqArrays(arrayA, arrayB) ? `✅Assertion Passed: [${arrayA}] === [${arrayB}]` : `⛔Assertion Failed: [${arrayA}] !== [${arrayB}]`;
+  const comparison = eqArrays(arrayA, arrayB) === expected;
+
+  let output = comparison ? `✅Assertion Passed: [${arrayA}] === [${arrayB}] is ${expected}` : `⛔Assertion Failed: [${arrayA}] !== [${arrayB}] is ${expected}`;
 
   console.log(output);
+  return comparison;
 };

@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  
-  let output = actual === expected ? `✅Assertion Passed: ${actual} === ${expected}` : `⛔Assertion Failed: ${actual} !== ${expected}`;
-
-  console.log(output);
-
-};
-
 const eqArrays = function(arrayA, arrayB) {
   if (arrayA.length === arrayB.length) {
     for (let i = 0; i < arrayA.length; i++) {
@@ -40,17 +32,17 @@ const eqObjects = function(object1, object2){
   return true;
 };
 
+const assertObjectsEqual = function(object1, object2, expected) {
+  const result = eqObjects(object1, object2) === expected;
+  
+  let output = result ? `✅Assertion Passed: Objects are the same === ${expected}` : `⛔Assertion Failed: Objects are the same !== ${expected}`;
 
-
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject= { size: "medium", color: "red" };
-assertEqual(eqObjects(shirtObject , anotherShirtObject), true); // => true
-
-const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
-assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false); // => false
+  console.log(output);
+  return result;
+};
 
 const objectArray1 = { myKey: [1, 2, 3], myOtherKey: "yes" };
 const objectArray2 = { myOtherKey: "yes", myKey: [1, 2, 3] };
 const objectArray3 = { myKey: [1, 2, 3], myOtherKey: "no" };
-assertEqual(eqObjects(objectArray1 , objectArray2), true); // => true
-assertEqual(eqObjects(objectArray1 , objectArray3), false); // => false
+assertObjectsEqual(objectArray1 , objectArray2, true); // => true
+assertObjectsEqual(objectArray1 , objectArray3, false); // => false

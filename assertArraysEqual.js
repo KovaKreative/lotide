@@ -15,7 +15,7 @@ const assertArraysEqual = function(arrayA, arrayB, expected) {
 
   const comparison = eqArrays(arrayA, arrayB) === expected;
 
-  let output = comparison ? `✅Assertion Passed: [${arrayA}] is the same as  [${arrayB}] === ${expected}` : `⛔Assertion Failed: [${arrayA}] is the same as [${arrayB}] !== ${expected}`;
+  let output = comparison ? `🤘Assertion Passed: [${arrayA}] is the same as  [${arrayB}] === ${expected}` : `💀Assertion Failed: [${arrayA}] is the same as [${arrayB}] !== ${expected}`;
 
   console.log(output);
   return comparison;

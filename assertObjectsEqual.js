@@ -38,7 +38,7 @@ const assertObjectsEqual = function(object1, object2, expected) {
   const obj1 = inspect(object1);
   const obj2 = inspect(object2);
   
-  let output = result ? `✅Assertion Passed: ${obj1} is the same as ${obj2} === ${expected}` : `⛔Assertion Failed: ${obj1} is the same as ${obj2} !== ${expected}`;
+  let output = result ? `🤘Assertion Passed: ${obj1} is the same as ${obj2} === ${expected}` : `💀Assertion Failed: ${obj1} is the same as ${obj2} !== ${expected}`;
 
   console.log(output);
   return result;

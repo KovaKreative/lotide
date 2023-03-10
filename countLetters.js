@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  
-  let output = actual === expected ? `✅Assertion Passed: ${actual} === ${expected}` : `⛔Assertion Failed: ${actual} !== ${expected}`;
-
-  console.log(output);
-
-};
+const { count } = require("console");
 
 const countLetters = function(phrase, ordered) {
   let normalizedPhrase = phrase.toLowerCase().replaceAll(' ', '');
@@ -14,11 +8,7 @@ const countLetters = function(phrase, ordered) {
   let listOfLetters = {};
 
   for (const char of normalizedPhrase) {
-    if (listOfLetters[char]) {
-      listOfLetters[char]++;
-      continue;
-    }
-    listOfLetters[char] = 1;
+    listOfLetters[char] = !listOfLetters[char] ? 1 : listOfLetters[char] + 1;
   }
 
   return listOfLetters;

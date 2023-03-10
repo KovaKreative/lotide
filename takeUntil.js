@@ -22,15 +22,12 @@ const assertArraysEqual = function(arrayA, arrayB, expected) {
 };
 
 const takeUntil = function(array, callback) {
-  let output = [];
-  for (const element of array) {
-    if (!callback(element)) {
-      output.push(element);
-      continue;
+  //let output = [];
+  for (const e in array) {
+    if (callback(array[e])) {
+      return array.slice(0, e);
     }
-    break;
   }
-  return output;
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

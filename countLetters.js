@@ -1,5 +1,3 @@
-const { count } = require("console");
-
 const countLetters = function(phrase, ordered) {
   let normalizedPhrase = phrase.toLowerCase().replaceAll(' ', '');
   if (ordered) { //An optional parameter to sort the letters with JS's default algorithm
@@ -13,3 +11,5 @@ const countLetters = function(phrase, ordered) {
 
   return listOfLetters;
 };
+
+module.exports = countLetters;

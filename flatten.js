@@ -18,6 +18,9 @@ const flatten = function(array) {
   return(newArrayBuffer);
 }
 
+module.exports = flatten;
+/*
 const myArray = [1, "mars", [0, "eleven", ["another array ?", true]], false, 4.3];
 
 console.log(flatten(myArray));
+*/

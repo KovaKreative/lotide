@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const assertEqual = require('../index').assertEqual;
 const assert = require('chai').assert;
 
 describe("#assertEqual", () => {

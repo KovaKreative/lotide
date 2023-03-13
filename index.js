@@ -1,21 +1,37 @@
-const assertArraysEqual   = require('./assertArraysEqual');
-const assertEqual         = require('./assertEqual');
-const assertObjectsEqual  = require('./assertObjectsEqual');
-const countLetters        = require('./countLetters');
-const countOnly           = require('./countOnly');
-const eqArrays            = require('./eqArrays');
-const eqObjects           = require('./eqObjects');
-const findKey             = require('./findKey');
-const findKeyByValue      = require('./findKeyByValue');
-const flatten             = require('./flatten');
-const head                = require('./head');
-const letterPositions     = require('./letterPositions');
-const map                 = require('./map');
-const middle              = require('./middle');
-const tail                = require('./tail');
-const takeUntil           = require('./takeUntil');
-const without             = require('./without');
+const assertArraysEqual   = require('./lib/assertArraysEqual');
+const assertEqual         = require('./lib/assertEqual');
+const assertObjectsEqual  = require('./lib/assertObjectsEqual');
+const countLetters        = require('./lib/countLetters');
+const countOnly           = require('./lib/countOnly');
+const eqArrays            = require('./lib/eqArrays');
+const eqObjects           = require('./lib/eqObjects');
+const findKey             = require('./lib/findKey');
+const findKeyByValue      = require('./lib/findKeyByValue');
+const flatten             = require('./lib/flatten');
+const head                = require('./lib/head');
+const letterPositions     = require('./lib/letterPositions');
+const map                 = require('./lib/map');
+const middle              = require('./lib/middle');
+const tail                = require('./lib/tail');
+const takeUntil           = require('./lib/takeUntil');
+const without             = require('./lib/without');
 
 module.exports = {
-  
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  countLetters,
+  countOnly,
+  eqArrays,
+  eqObjects,
+  findKey,
+  findKeyByValue,
+  flatten,
+  head,
+  letterPositions,
+  map,
+  middle,
+  tail,
+  takeUntil,
+  without
 };
